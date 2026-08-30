@@ -1,0 +1,9 @@
+export { Categories } from "./Categories";
+export { DealOfTheDay } from "./DealOfTheDay";
+export { HowItWorks } from "./HowItWorks";
+export { Hero } from "./Hero";
+export { Newsletter } from "./Newsletter";
+export { StoreLogos } from "../StoreLogos";
+export { Testimonials } from "./Testimonials";
+export { TrendingDeals } from "./TrendingDeals";
+export { TrustMetrics } from "./TrustMetrics";

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .section-pad {
+    @apply px-4 pt-20 pb-16 sm:px-6 lg:px-8 lg:pt-28 lg:pb-24;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-6xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold
+      transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-60
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-600 text-white shadow-neon hover:bg-brand-700 active:scale-[0.97];
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-slate-900 border border-slate-200 hover:border-brand-300 hover:bg-brand-50 active:scale-[0.97];
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-slate-700 hover:bg-slate-100 active:scale-[0.97];
+  }
+
+  .card {
+    @apply rounded-2xl bg-white shadow-soft border border-slate-100;
+  }
+}
